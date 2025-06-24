@@ -24,3 +24,4 @@ while True:
 
 #design
     screen.fill(background_color)
+    game_grid.draw(screen)
