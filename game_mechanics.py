@@ -1,7 +1,8 @@
 import pygame,sys
 from grid_system import GridSystem
 from blocks import LBlock
-#variabless
+
+#variables
 line_color=(45,59,67)
 
 pygame.init()
@@ -26,3 +27,4 @@ while True:
 #design
     screen.fill(line_color)
     game_grid.draw(screen)
+    l_block.draw(screen)
