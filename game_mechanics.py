@@ -1,6 +1,6 @@
 import pygame,sys
 from grid_system import GridSystem
-from blocks import LBlock
+from blocks import *
 
 #variables
 line_color=(45,59,67)
@@ -13,7 +13,7 @@ pygame.display.set_caption("Tetris Game") #title of the window
 clock=pygame.time.Clock() #Determines frame rate of game
 game_grid=GridSystem()
 
-l_block=LBlock()
+block=JBlock()
 
 while True:
     for event in pygame.event.get():
@@ -27,4 +27,4 @@ while True:
 #design
     screen.fill(line_color)
     game_grid.draw(screen)
-    l_block.draw(screen)
+    block.draw(screen)
