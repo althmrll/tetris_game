@@ -1,3 +1,5 @@
+import pygame
+
 class GridSystem:
     def __init__(self):
         self.num_rows=20
@@ -22,3 +24,10 @@ class GridSystem:
         violet = (53,28,117)
 
         return [red,orange,yellow,green,blue,indigo,violet]
+    
+    def draw(self,screen):
+        for row in range(self.num_rows):
+            for column in range (self.num_cols):
+                cell_value = self.grid[row][column]
+                cell_rect=pygame.Rect(column*self.cell_size, row*self.cell_size,self.cell_size,self.cell_size)
+                pygame.draw.rect(screen, self.colors[cell_value], cell_rect)
