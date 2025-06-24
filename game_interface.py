@@ -2,7 +2,7 @@ import pygame,sys
 from grid_system import GridSystem
 
 #variabless
-background_color=(16,17,30)
+line_color=(255,255,255)
 
 pygame.init()
 
@@ -26,5 +26,5 @@ while True:
     clock.tick(60)
 
 #design
-    screen.fill(background_color)
+    screen.fill(line_color)
     game_grid.draw(screen)
