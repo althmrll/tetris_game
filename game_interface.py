@@ -1,5 +1,8 @@
 import pygame,sys
 
+#variabless
+background_color=(16,17,30)
+
 pygame.init()
 
 screen = pygame.display.set_mode((300,600)) #main_window
@@ -15,4 +18,6 @@ while True:
 
     pygame.display.update()
     clock.tick(60)
-    
+
+#design
+    screen.fill(background_color)
