@@ -13,7 +13,7 @@ pygame.display.set_caption("Tetris Game") #title of the window
 clock=pygame.time.Clock() #Determines frame rate of game
 game_grid=GridSystem()
 
-block=JBlock()
+block=IBlock()
 
 while True:
     for event in pygame.event.get():

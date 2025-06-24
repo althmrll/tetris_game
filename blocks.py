@@ -32,7 +32,6 @@ class JBlock(GeneralBlock):
             2: [BlockPosition(1,0),BlockPosition(1,1),BlockPosition(1,2), BlockPosition(2,2)],
             3: [BlockPosition(0,1),BlockPosition(1,1),BlockPosition(2,0), BlockPosition(2,1)]
         }
-        self.move(0,3)
 
 class ZBlock(GeneralBlock):
     def __init__(self):
