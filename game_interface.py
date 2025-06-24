@@ -1,4 +1,5 @@
 import pygame,sys
+from grid_system import GridSystem
 
 #variabless
 background_color=(16,17,30)
@@ -9,6 +10,8 @@ screen = pygame.display.set_mode((300,600)) #main_window
 pygame.display.set_caption("Tetris Game") #title of the window
 
 clock=pygame.time.Clock() #Determines frame rate of game
+game_grid=GridSystem()
+game_grid.print_grid()
 
 while True:
     for event in pygame.event.get():
