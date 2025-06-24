@@ -15,6 +15,7 @@ class GridSystem:
             print()
     
     def block_colors(self):
+        empty=(16,17,30)
         red = (153,15,2)
         orange=(216,124,33)
         yellow = (255,246,0)
@@ -23,7 +24,7 @@ class GridSystem:
         indigo=(0,157,175)
         violet = (53,28,117)
 
-        return [red,orange,yellow,green,blue,indigo,violet]
+        return [empty, red,orange,yellow,green,blue,indigo,violet]
     
     def draw(self,screen):
         for row in range(self.num_rows):
