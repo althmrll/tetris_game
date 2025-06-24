@@ -2,7 +2,7 @@ import pygame,sys
 from grid_system import GridSystem
 
 #variabless
-line_color=(255,255,255)
+line_color=(45,59,67)
 
 pygame.init()
 
