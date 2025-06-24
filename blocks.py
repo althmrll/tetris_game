@@ -10,6 +10,7 @@ class IBlock(GeneralBlock):
             2: [BlockPosition(2,0),BlockPosition(2,1),BlockPosition(2,2), BlockPosition(2,3)],
             3: [BlockPosition(0,1),BlockPosition(1,1),BlockPosition(2,1), BlockPosition(3,1)]
         }
+        self.move(0,3)
 
 class TBlock(GeneralBlock):
     def __init__(self):
@@ -20,6 +21,7 @@ class TBlock(GeneralBlock):
             2: [BlockPosition(1,0),BlockPosition(1,1),BlockPosition(1,2), BlockPosition(2,1)],
             3: [BlockPosition(0,1),BlockPosition(1,0),BlockPosition(1,1), BlockPosition(2,1)]
         }
+        self.move(0,3)
 
 class JBlock(GeneralBlock):
     def __init__(self):
@@ -30,6 +32,7 @@ class JBlock(GeneralBlock):
             2: [BlockPosition(1,0),BlockPosition(1,1),BlockPosition(1,2), BlockPosition(2,2)],
             3: [BlockPosition(0,1),BlockPosition(1,1),BlockPosition(2,0), BlockPosition(2,1)]
         }
+        self.move(0,3)
 
 class ZBlock(GeneralBlock):
     def __init__(self):
@@ -40,6 +43,7 @@ class ZBlock(GeneralBlock):
             2: [BlockPosition(1,0),BlockPosition(1,1),BlockPosition(2,1), BlockPosition(2,2)],
             3: [BlockPosition(0,1),BlockPosition(1,0),BlockPosition(1,1), BlockPosition(2,0)]
         }
+        self.move(0,3)
 
 class LBlock(GeneralBlock):
     def __init__(self):
@@ -50,6 +54,7 @@ class LBlock(GeneralBlock):
             2: [BlockPosition(1,0),BlockPosition(1,1),BlockPosition(1,2), BlockPosition(2,0)],
             3: [BlockPosition(0,0),BlockPosition(0,1),BlockPosition(1,1), BlockPosition(2,1)]
         }
+        self.move(0,3)
 
 class OBlock(GeneralBlock):
     def __init__(self):
@@ -60,6 +65,7 @@ class OBlock(GeneralBlock):
             2: [BlockPosition(0,0),BlockPosition(0,1),BlockPosition(1,0), BlockPosition(1,1)],
             3: [BlockPosition(0,0),BlockPosition(0,1),BlockPosition(1,0), BlockPosition(1,1)]
         }
+        self.move(0,3)
 
 class SBlock(GeneralBlock):
     def __init__(self):
@@ -70,3 +76,4 @@ class SBlock(GeneralBlock):
             2: [BlockPosition(1,1),BlockPosition(1,2),BlockPosition(2,0), BlockPosition(2,1)],
             3: [BlockPosition(0,0),BlockPosition(1,0),BlockPosition(1,1), BlockPosition(2,1)]
         }
+        self.move(0,3)
