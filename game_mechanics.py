@@ -34,6 +34,11 @@ class Game:
     def rotate(self):
         self.current_block.rotate()
 
+    def undo_rotate(self):
+        self.rotation_state+=1
+        if self.rotation_state==0:
+            self.rotation_state = len(self.cells)-1
+            
     def inside_checker(self):
         tiles=self.current_block.get_position()
         for tile in tiles:
