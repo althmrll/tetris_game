@@ -10,7 +10,7 @@ class IBlock(GeneralBlock):
             2: [BlockPosition(2,0),BlockPosition(2,1),BlockPosition(2,2), BlockPosition(2,3)],
             3: [BlockPosition(0,1),BlockPosition(1,1),BlockPosition(2,1), BlockPosition(3,1)]
         }
-        self.move(0,3)
+        self.move(-1,3)
 
 class TBlock(GeneralBlock):
     def __init__(self):
@@ -65,7 +65,7 @@ class OBlock(GeneralBlock):
             2: [BlockPosition(0,0),BlockPosition(0,1),BlockPosition(1,0), BlockPosition(1,1)],
             3: [BlockPosition(0,0),BlockPosition(0,1),BlockPosition(1,0), BlockPosition(1,1)]
         }
-        self.move(0,3)
+        self.move(0,4)
 
 class SBlock(GeneralBlock):
     def __init__(self):
