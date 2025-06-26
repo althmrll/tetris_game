@@ -18,12 +18,18 @@ class Game:
     
     def move_left(self):
         self.current_block.move(0,-1)
-    
+        if self.inside_checker()==False:
+            self.current_block.move(0,1)
+
     def move_right(self):
         self.current_block.move(0,1)
+        if self.inside_checker()==False:
+            self.current_block.move(0,-1)
     
     def move_down(self):
         self.current_block.move(1,0)
+        if self.inside_checker()==False:
+            self.current_block.move(-1,0)
     
     def inside_checker(self):
         tiles=self.current_block.block_position_limit()
