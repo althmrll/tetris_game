@@ -30,7 +30,8 @@ class Game:
         self.current_block.move(1,0)
         if self.inside_checker()==False:
             self.current_block.move(-1,0)
-    
+            self.lock_in_place()
+            
     def lock_in_place(self):
         tiles=self.current_block.get_position()
         for position in tiles:
