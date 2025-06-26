@@ -19,6 +19,13 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit
+        if event.type==pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                game.move_left()
+            if event.key == pygame.K_RIGHT:
+                game.move_right()
+            if event.key == pygame.K_DOWN:
+                game.move_down()
 
     pygame.display.update()
     clock.tick(60)
