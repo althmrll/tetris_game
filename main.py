@@ -13,6 +13,7 @@ clock=pygame.time.Clock() #Determines frame rate of game
 screen.fill(line_color)
 
 game=Game()
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -21,3 +22,4 @@ while True:
 
     pygame.display.update()
     clock.tick(60)
+    game.draw()

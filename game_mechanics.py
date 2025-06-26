@@ -15,4 +15,7 @@ class Game:
         block=random.choices(self.blocks)
         self.blocks.remove(block)
         return block
-        
+    
+    def draw(self,screen):
+        self.grid.draw(screen)
+        self.current_block.draw(screen)
