@@ -31,6 +31,9 @@ class Game:
         if self.inside_checker()==False:
             self.current_block.move(-1,0)
     
+    def rotate(self):
+        self.current_block.rotate()
+
     def inside_checker(self):
         tiles=self.current_block.get_position()
         for tile in tiles:
