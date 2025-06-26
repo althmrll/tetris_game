@@ -32,7 +32,7 @@ class Game:
             self.current_block.move(-1,0)
     
     def inside_checker(self):
-        tiles=self.current_block.block_position_limit()
+        tiles=self.current_block.get_position()
         for tile in tiles:
             if self.grid.block_position_limit(tile.row,tile.column)==False:
                 return False
