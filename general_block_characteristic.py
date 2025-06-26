@@ -25,7 +25,7 @@ class GeneralBlock:
         return moved_tiles
         
     def draw(self, screen):
-        tiles=self.get_position(screen)
+        tiles=self.get_position()
         for tile in tiles:
             tile_rect=pygame.Rect(tile.column*self.cell_size+1, tile.row*self.cell_size+1,self.cell_size-1,self.cell_size-1)
             pygame.draw.rect(screen,self.colors[self.id], tile_rect)
