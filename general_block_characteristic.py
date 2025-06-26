@@ -23,7 +23,12 @@ class GeneralBlock:
             position=BlockPosition(position.row+self.row_offset, position.column+self.column_offset)
             moved_tiles.append(position)
         return moved_tiles
-        
+    
+    def rotate(self):
+        self.rotation_state+=1
+        if self.rotation_state == len(self.cells):
+            self.rotation_state = 0
+            
     def draw(self, screen):
         tiles=self.get_position()
         for tile in tiles:
