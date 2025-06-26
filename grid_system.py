@@ -20,10 +20,11 @@ class GridSystem:
             return True
         return False
 
-    def rotate(self):
-        if self.block_inside()==False:
-            self.current_block.undo_rotation(0)
-            
+    def undo_rotate(self):
+        self.rotation_state+=1
+        if self.rotation_state==0:
+            self.rotation_state = len(self.cells)-1
+
     def draw(self,screen):       
         for row in range(self.num_rows):
             for column in range (self.num_cols):
