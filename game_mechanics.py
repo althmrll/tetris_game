@@ -12,7 +12,7 @@ class Game:
     def random_block(self):
         if len(self.blocks)==0:
             self.blocks = [IBlock(),TBlock(),JBlock(),ZBlock(),LBlock(),OBlock(),SBlock()]
-        block=random.choices(self.blocks)
+        block=random.choice(self.blocks)
         self.blocks.remove(block)
         return block
     
