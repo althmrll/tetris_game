@@ -25,6 +25,13 @@ class Game:
     def move_down(self):
         self.current_block.move(1,0)
     
+    def inside_checker(self):
+        tiles=self.current_block.block_position_limit()
+        for tile in tiles:
+            if self.grid.block_position_limit(tile.row,tile.column)==False:
+                return False
+        return True
+
     def draw(self,screen):
         self.grid.draw(screen)
         self.current_block.draw(screen)
