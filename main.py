@@ -15,7 +15,7 @@ screen.fill(line_color)
 game=Game()
 
 game_update=pygame.USEREVENT
-pygame.time.set_timer(game_update, 200)
+pygame.time.set_timer(game_update, 500)
 
 while True:
     for event in pygame.event.get():
@@ -31,6 +31,8 @@ while True:
                 game.move_down()
             if event.key == pygame.K_SPACE:
                 game.rotate()
+        if event.type==game_update:
+            game.move_down()
 
     pygame.display.update()
     clock.tick(60)
