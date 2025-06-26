@@ -31,6 +31,13 @@ class Game:
         if self.inside_checker()==False:
             self.current_block.move(-1,0)
     
+    def lock_in_place(self):
+        tiles=self.current_block.get_position()
+        for position in tiles:
+            self.grid.grid[position.row][position.column]=self.current_block.id
+            self.current_vlock=self.next_block
+            self.next_block=self.random_block()
+            
     def rotate(self):
         self.current_block.rotate()
         if self.inside_checker()==False:
