@@ -7,7 +7,7 @@ pygame.init()
 title=pygame.font.Font(None,40)
 score=title.render("Score:",True, Colors.text_color)
 next_block=title.render("Next:", True,Colors.text_color)
-
+game_over_message=title.render("Game Over", True, Colors.text_color)
 score_rect=pygame.Rect(320,55,170,60)
 next_block_rect=pygame.Rect(320,215,170,180)
 
@@ -45,6 +45,7 @@ while True:
     screen.fill(Colors.line_color)
     screen.blit(score,(365,20,50,50))
     screen.blit(next_block,(375,180,50,50))
+    screen.blit(game_over_message,(320,450,50,50))
     pygame.draw.rect(screen,Colors.empty,score_rect,0,10)
     pygame.draw.rect(screen,Colors.empty,next_block_rect,0,10)
     game.draw(screen)
