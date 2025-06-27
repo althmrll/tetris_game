@@ -6,6 +6,10 @@ pygame.init()
 
 title=pygame.font.Font(None,40)
 score=title.render("Score:",True, Colors.text_color)
+next_block=title.render("Next:", True,Colors.text_color)
+
+score_rect=pygame.Rect(320,55,170,60)
+next_block_rect=pygame.Rect(320,215,170,180)
 
 screen = pygame.display.set_mode((500,620)) #main_window
 pygame.display.set_caption("Tetris Game") #title of the window
@@ -40,6 +44,9 @@ while True:
 
     screen.fill(Colors.line_color)
     screen.blit(score,(365,20,50,50))
+    screen.blit(next_block,(375,180,50,50))
+    pygame.draw.rect(screen,Colors.empty,score_rect,0,10)
+    pygame.draw.rect(screen,Colors.empty,next_block_rect,0,10)
     game.draw(screen)
     
     pygame.display.update()

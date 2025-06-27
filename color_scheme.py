@@ -9,7 +9,6 @@ class Colors:
     violet = (160,61,255)
     line_color=(16,17,30)
     text_color= (255, 255, 255)
-    light_grey=(58,58,65)
 
     @classmethod
     def block_colors(cls):
