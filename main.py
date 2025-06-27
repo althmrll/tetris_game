@@ -35,8 +35,8 @@ while True:
                 game.move_down()
             if event.key == pygame.K_SPACE and game.game_over==False:
                 game.rotate()
-        if event.type==game_update and game.game_over==False:
-            game.move_down()
+            if event.type==game_update and game.game_over==False:
+                game.move_down()
 
     pygame.display.update()
     clock.tick(60)
