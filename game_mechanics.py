@@ -42,6 +42,11 @@ class Game:
         self.grid.clear_full_row()
         if self.check_if_block_fits()==False:
             self.game_over=True
+    
+    def reset(self):
+        self.grid.reset()
+        self.current_block=self.random_block()
+        self.next_block=self.random_block
 
     def rotate(self):
         self.current_block.rotate()
