@@ -6,7 +6,7 @@ line_color=(45,59,67)
 
 pygame.init()
 
-screen = pygame.display.set_mode((300,600)) #main_window
+screen = pygame.display.set_mode((500,620)) #main_window
 pygame.display.set_caption("Tetris Game") #title of the window
 
 clock=pygame.time.Clock() #Determines frame rate of game
@@ -15,7 +15,7 @@ screen.fill(line_color)
 game=Game()
 
 game_update=pygame.USEREVENT
-pygame.time.set_timer(game_update, 100)
+pygame.time.set_timer(game_update, 150)
 
 while True:
     for event in pygame.event.get():
