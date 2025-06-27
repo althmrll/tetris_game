@@ -79,4 +79,9 @@ class Game:
     def draw(self,screen):
         self.grid.draw(screen)
         self.current_block.draw(screen,11,11)
-        self.next_block.draw(screen,270,270)
+        if self.next_block.id==1:
+            self.next_block.draw(screen,255,290)
+        elif self.next_block.id==6:
+            self.next_block.draw(screen,255,280)
+        else:
+            self.next_block.draw(screen,270,270)
