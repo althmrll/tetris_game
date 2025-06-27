@@ -47,11 +47,11 @@ while True:
 
     screen.fill(Colors.line_color)
     screen.blit(score,(365,20,50,50))
-    screen.blit(score_value,score_value.get_rect(centerx=score_rect.centerx,centery=score_rect.centery))
     screen.blit(next_block,(370,180,50,50))
     if game.game_over==True:
         screen.blit(game_over_message,(330,450,50,50))
     pygame.draw.rect(screen,Colors.empty,score_rect,0,10)
+    screen.blit(score_value,score_value.get_rect(centerx=score_rect.centerx,centery=score_rect.centery))
     pygame.draw.rect(screen,Colors.empty,next_block_rect,0,10)
     game.draw(screen)
     
