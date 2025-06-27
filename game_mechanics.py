@@ -8,6 +8,7 @@ class Game:
         self.blocks = [IBlock(),TBlock(),JBlock(),ZBlock(),LBlock(),OBlock(),SBlock()]
         self.current_block = self.random_block()
         self.next_block = self.random_block()
+        self.game_over=False
 
     def random_block(self):
         if len(self.blocks)==0:
@@ -39,6 +40,8 @@ class Game:
         self.current_block=self.next_block
         self.next_block=self.random_block()
         self.grid.clear_full_row()
+        if self.check_if_block_fits()==False:
+            self.game_over=True
 
     def rotate(self):
         self.current_block.rotate()
