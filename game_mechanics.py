@@ -12,8 +12,9 @@ class Game:
         self.score=0
     
     def update_score(self,lines_cleared):
-       points=lines_cleared*100
-       self.score+=points
+       if lines_cleared>=1:
+           points=lines_cleared*100
+           self.score+=points
 
     def random_block(self):
         if len(self.blocks)==0:
