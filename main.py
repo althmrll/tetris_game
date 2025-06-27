@@ -1,16 +1,16 @@
 import pygame,sys
 from game_mechanics import Game
-
-#variables
-line_color=(16,17,30)
+from color_scheme import Colors
 
 pygame.init()
+
+title=pygame.font.Font(None,40)
+score=title.render("Score:",True, Colors.text_color)
 
 screen = pygame.display.set_mode((500,620)) #main_window
 pygame.display.set_caption("Tetris Game") #title of the window
 
 clock=pygame.time.Clock() #Determines frame rate of game
-screen.fill(line_color)
 
 game=Game()
 
@@ -38,6 +38,9 @@ while True:
         if event.type==game_update and game.game_over==False:
             game.move_down()
 
+    screen.fill(Colors.line_color)
+    screen.blit(score,(365,20,50,50))
+    game.draw(screen)
+    
     pygame.display.update()
     clock.tick(60)
-    game.draw(screen)
