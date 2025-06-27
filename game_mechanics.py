@@ -28,7 +28,7 @@ class Game:
     
     def move_down(self):
         self.current_block.move(1,0)
-        if self.inside_checker()==False:
+        if self.inside_checker()==False or self.check_if_block_fits()==False:
             self.current_block.move(-1,0)
             self.lock_in_place()
 
@@ -50,7 +50,14 @@ class Game:
             if self.grid.block_position_limit(tile.row,tile.column)==False:
                 return False
         return True
-
+    
+    def check_if_block_fits(self):
+        tiles=self.current_block.get_position()
+        for tile in tiles:
+            if self.grid.check_if_empty(tile.row,tile.column==False):
+                return False
+        return True
+    
     def draw(self,screen):
         self.grid.draw(screen)
         self.current_block.draw(screen)
