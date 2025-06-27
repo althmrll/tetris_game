@@ -42,7 +42,7 @@ class GridSystem:
     
     def move_row_down(self,row,num_rows):
         for column in range(self.num_cols):
-            self.grid[row-num_rows][column]=self.grid[row][column]
+            self.grid[row+num_rows][column]=self.grid[row][column]
             self.grid[row][column]=0
         
     def clear_full_row(self):
