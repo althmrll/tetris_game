@@ -50,7 +50,7 @@ class Game:
         self.next_block=self.random_block()
         cleared_rows=self.grid.clear_full_row()
         if cleared_rows>0:
-            self.clear_row.play()
+            self.clear_row_sound.play()
         self.update_score(cleared_rows)
         if self.check_if_block_fits()==False:
             self.game_over=True
