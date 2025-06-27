@@ -30,6 +30,12 @@ class GridSystem:
             return True
         return False
     
+    def check_if_row_is_full(self,row):
+        for column in range(self.num_cols):
+            if self.grid[row][column]==0:
+                return False
+            return True
+        
     def draw(self,screen):       
         for row in range(self.num_rows):
             for column in range (self.num_cols):
