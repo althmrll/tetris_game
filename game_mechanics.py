@@ -54,7 +54,7 @@ class Game:
     def check_if_block_fits(self):
         tiles=self.current_block.get_position()
         for tile in tiles:
-            if self.grid.check_if_empty(tile.row,tile.column==False):
+            if self.grid.check_if_empty(tile.row,tile.column)==False:
                 return False
         return True
     
