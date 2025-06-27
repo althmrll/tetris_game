@@ -25,6 +25,11 @@ class GridSystem:
         if self.rotation_state==0:
             self.rotation_state = len(self.cells)-1
 
+    def check_if_empty(self, row, column):
+        if self.grid[row][column] == 0:
+            return True
+        return False
+    
     def draw(self,screen):       
         for row in range(self.num_rows):
             for column in range (self.num_cols):
