@@ -38,8 +38,8 @@ class Game:
             self.grid.grid[position.row][position.column]=self.current_block.id
         self.current_block=self.next_block
         self.next_block=self.random_block()
-        self.grid.clear_full_row
-        
+        self.grid.clear_full_row()
+
     def rotate(self):
         self.current_block.rotate()
         if self.inside_checker()==False or self.check_if_block_fits()==False:
