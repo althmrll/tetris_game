@@ -49,7 +49,7 @@ class GridSystem:
         completed=0
         for row in range(self.num_rows-1,0,-1):
             if self.check_if_row_is_full(row):
-                self.clear_row(row)
+                self.clear_cell_value(row)
                 completed+=1
             elif completed>0:
                 self.move_row_down(row, completed)
