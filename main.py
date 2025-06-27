@@ -15,7 +15,7 @@ screen.fill(line_color)
 game=Game()
 
 game_update=pygame.USEREVENT
-pygame.time.set_timer(game_update, 500)
+pygame.time.set_timer(game_update, 300)
 
 while True:
     for event in pygame.event.get():
