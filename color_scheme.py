@@ -1,12 +1,12 @@
 class Colors:
     empty=(45,59,67)
-    red = (153,15,2)
-    orange=(216,124,33)
-    yellow = (255,246,0)
-    green = (0,106,78)
-    blue = (22,30,153)
-    indigo=(0,157,175)
-    violet = (53,28,117)
+    red = (239,4,4)
+    orange=(239,151,4)
+    yellow = (239,191,4)
+    green = (4,239,54)
+    blue = (69,15,239)
+    indigo=(4,216,239)
+    violet = (160,61,255)
 
     @classmethod
     def block_colors(cls):
