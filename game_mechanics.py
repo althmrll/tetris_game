@@ -1,7 +1,7 @@
 from grid_system import GridSystem
 from blocks import *
 import random
-
+import pygame
 class Game:
     def __init__(self):
         self.grid = GridSystem()
@@ -10,6 +10,9 @@ class Game:
         self.next_block = self.random_block()
         self.game_over=False
         self.score=0
+        self.clear_row_sound=pygame.mixer.Sound("clear_row.mp3")
+        pygame.mixer.music.load("tetris_music.mp3")
+        pygame.mixer.music.play(-1)
     
     def update_score(self,lines_cleared):
        if lines_cleared>=1:
@@ -46,6 +49,8 @@ class Game:
         self.current_block=self.next_block
         self.next_block=self.random_block()
         cleared_rows=self.grid.clear_full_row()
+        if cleared_rows>0:
+            self.clear_row.play()
         self.update_score(cleared_rows)
         if self.check_if_block_fits()==False:
             self.game_over=True
