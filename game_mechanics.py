@@ -45,8 +45,9 @@ class Game:
     
     def reset(self):
         self.grid.reset()
+        self.blocks = [IBlock(),TBlock(),JBlock(),ZBlock(),LBlock(),OBlock(),SBlock()]
         self.current_block=self.random_block()
-        self.next_block=self.random_block
+        self.next_block=self.random_block()
 
     def rotate(self):
         self.current_block.rotate()
