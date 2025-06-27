@@ -1,5 +1,5 @@
 class Colors:
-    empty=(16,17,30)
+    empty=(45,59,67)
     red = (153,15,2)
     orange=(216,124,33)
     yellow = (255,246,0)

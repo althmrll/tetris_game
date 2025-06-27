@@ -2,7 +2,7 @@ import pygame,sys
 from game_mechanics import Game
 
 #variables
-line_color=(45,59,67)
+line_color=(16,17,30)
 
 pygame.init()
 
